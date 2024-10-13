@@ -12,6 +12,7 @@ int main()
     if(s==0)
     {
         std::cout<<"Eroare la alocare \n";
+        return -1
     }
 
     //citiri si afisari

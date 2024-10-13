@@ -7,7 +7,7 @@
 int main()
 {
     student *s;
-    s=(student*)malloc(30*sizeof(student));
+    s=(student*)malloc(n*sizeof(student));
     if(s==0)
     {
         printf("err\n");
@@ -35,5 +35,10 @@ int main()
         s[i].Write(s);
     }
 
+    if(s)
+    {
+        free(s);
+    }
+    s=0;
     return 0;
 }
