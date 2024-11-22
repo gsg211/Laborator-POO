@@ -29,5 +29,6 @@ int main()
 	//testare citire fara argument
 	c.citire();
 	c.afisare();
+
 	return 0;
 }

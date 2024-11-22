@@ -122,3 +122,4 @@ void cisterna::setCantitate(float cantitate)
 {
     this->cantitate=cantitate;
 }
+

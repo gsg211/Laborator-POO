@@ -17,11 +17,10 @@ namespace Transporturi
         void citire();
         void citire(float cantitate);
 
-        char* getContinut();
-        void setContinut(char *continut);
+         char* getContinut();
+         void setContinut(char *continut);
 
-        float getCantitate();
-        void setCantitate(float cantitate=25.8);
-
+         float getCantitate();
+         void setCantitate(float cantitate=25.8);
     };
 }

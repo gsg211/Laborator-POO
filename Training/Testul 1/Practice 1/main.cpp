@@ -14,7 +14,6 @@ int main()
 	SortCarti(c,n);
 	AfisareVector(c,n);
 
-	DealocareVector(c,n);
 	delete [] c;
 	return 0;
 }

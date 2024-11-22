@@ -107,11 +107,3 @@ void AfisareVector(Carte *carti,int n)
         carti[i].afisare();
     }
 }
-
-void DealocareVector(Carte *carti,int n)
-{
-    for(int i=0;i<n;i++)
-    {
-        carti[i].~Carte();
-    }
-}
