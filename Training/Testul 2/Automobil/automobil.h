@@ -28,6 +28,17 @@ namespace Vehicule
     {
         private:
         double vitezaMaxima;
+        public:
+        motocicleta();
+        motocicleta(char* marca,double viteza_max);
+        motocicleta(const motocicleta &c);
+        ~motocicleta();
+
+        motocicleta& operator=(const motocicleta &c);
+        friend bool operator==(const motocicleta&m1,const motocicleta&m2);
+
+        void citire();
+        void afisare();
     };
-   
+    bool operator==(const motocicleta&m1,const motocicleta&m2);
 }
