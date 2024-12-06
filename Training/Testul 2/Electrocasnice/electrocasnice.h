@@ -34,7 +34,7 @@ namespace electrocasnice
         private:
         float consum;
         public:
-        CuptorCuInductie(char* marca,int temperatura,float consum);
+        CuptorCuInductie(char* marca,int temperatura,float consum=130.78);
         CuptorCuInductie(const CuptorCuInductie &c);
         ~CuptorCuInductie();
         void afisare();
@@ -42,10 +42,9 @@ namespace electrocasnice
 
     };
     //aveam crezand ca nu puteam sa folosesc membrii dar merge si fara
-    // cuptor& operator+=( cuptor &c,int temp);
+     cuptor& operator+=( cuptor &c,int temp);
     // cuptor& operator++(cuptor &c);
     // cuptor operator++(cuptor &c,int dummy);
     // std::istream& operator>>(std::istream &input,cuptor &c);
     // std::ostream& operator<<(std::ostream &output,cuptor &c);
-
 }

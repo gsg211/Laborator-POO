@@ -72,6 +72,7 @@ void cuptor::citire()
     std::cout<<"Temperatura maxima: ";
     //std::cin.ignore(1);
     std::cin>>temperaturaMaxima;
+    std::cin.ignore(1);
 }
 
 
@@ -130,7 +131,10 @@ namespace electrocasnice
     //Param return: inputstream (NEAPARAT REFERINTA) 
     //e functia de citire basic dar cu c. in loc de this->
     //si input in loc de std::cin
-    std::istream& operator>>(std::istream &input,cuptor &c)
+
+    
+    /*
+   std::istream& operator>>(std::istream &input,cuptor &c)
     {
         char buffer[64];
         std::cout<<"citire stream\n";
@@ -147,9 +151,17 @@ namespace electrocasnice
         //std::cin.ignore(1);
         input>>c.temperaturaMaxima;
         std::cout<<"\n";
+        std::cin.ignore(1);
+        return input; //neaparat return la stream
+    }*/
 
+    //testat si merge si pt inlantuire
+    std::istream& operator>>(std::istream &input,cuptor &c)
+    {
+        c.citire();
         return input; //neaparat return la stream
     }
+
 
     //acelasi lucru
     std::ostream& operator<<(std::ostream& output,cuptor &c)
@@ -161,5 +173,3 @@ namespace electrocasnice
         return output;
     }
 }
-
-
