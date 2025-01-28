@@ -1,7 +1,7 @@
 #include "Caircraft.h"
 #include <cstring>
 #include <iostream>
-
+#include "FlyingObjects.h"
 using namespace std;
 
 CAircraft::CAircraft(/* args */)
@@ -81,8 +81,8 @@ void CAircraft::Write()
     {
         cout<<"\n\nOwner: "<<m_owner<<"\n";
     }
-    
-    cout<<"Type: "<<m_type;
+    FlyingObjects::CAircraftType type_craft;
+    cout<<"\nType: "<<type_craft.getTypeName(m_type);
 }
 
 int CAircraft::getCounter()

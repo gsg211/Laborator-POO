@@ -38,7 +38,7 @@ int main()
     std::cout<<"\n\nCounter: "<<a1.getCounter();
     */
     
-    CAirplane c,c1((char*)"Ion",1,0,15),c2((char*)"Gica Popescu",1,3,200),c3(c2);
+    CAirplane c,c1((char*)"Ion",1,0,15),c2((char*)"Gica Popescu",1,2,200),c3(c2);
     c.Write();
     c1.Write();
     c2.Write();

@@ -2,6 +2,9 @@
 #include "CAircraft.h"
 #include <iostream>
 #include <cstring>
+#include "FlyingObjects.h"
+
+
 using namespace std;
 CAirplane::CAirplane():CAircraft()
 {
@@ -51,7 +54,8 @@ void CAirplane::Read()
 void CAirplane::Write()
 {
     CAircraft::Write();
-    cout<<"\nPropulsion type: "<<m_propulsion<<"\n";
+    FlyingObjects::CpropulsionType type_prop;
+    cout<<"\nPropulsion type: "<<type_prop.getTypeName(m_propulsion)<<"\n";
     cout<<"Speed: "<<m_speed<<"\n";
 }
 
@@ -66,8 +70,10 @@ ostream& operator<<(ostream& output, CAirplane& p)
         output<<"\n\nOwner: "<<p.m_owner<<"\n";
     }
     
-    output<<"Type: "<<p.m_type;
-    output<<"\nPropulsion type: "<<p.m_propulsion<<"\n";
+    FlyingObjects::CAircraftType type_craft;
+    FlyingObjects::CpropulsionType type_prop;
+    output<<"Type: "<<type_craft.getTypeName(p.m_type);
+    output<<"\nPropulsion type: "<<type_prop.getTypeName(p.m_propulsion)<<"\n";
     output<<"Speed: "<<p.m_speed<<"\n";
     return output;
 
