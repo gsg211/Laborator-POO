@@ -81,8 +81,7 @@ void CAircraft::Write()
     {
         cout<<"\n\nOwner: "<<m_owner<<"\n";
     }
-    FlyingObjects::CAircraftType type_craft;
-    cout<<"\nType: "<<type_craft.getTypeName(m_type);
+    cout<<"Type: "<<FlyingObjects::CAircraftType::getTypeName(m_type);
 }
 
 int CAircraft::getCounter()

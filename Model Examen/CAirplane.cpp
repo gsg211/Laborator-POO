@@ -8,6 +8,7 @@
 using namespace std;
 CAirplane::CAirplane():CAircraft()
 {
+    m_type=1;
     m_propulsion=0;
     m_speed=0;
 }
@@ -47,15 +48,16 @@ void CAirplane::Read()
     CAircraft::Read();
     cout<<"Propulsion type: ";
     cin>>m_propulsion;
+    cin.ignore(1,'\n');
     cout<<"Speed : ";
     cin>>m_speed;
+    cin.ignore(1,'\n');
 }
 
 void CAirplane::Write()
 {
     CAircraft::Write();
-    FlyingObjects::CpropulsionType type_prop;
-    cout<<"\nPropulsion type: "<<type_prop.getTypeName(m_propulsion)<<"\n";
+    cout<<"\nPropulsion type: "<<FlyingObjects::CpropulsionType::getTypeName(m_propulsion)<<"\n";
     cout<<"Speed: "<<m_speed<<"\n";
 }
 
