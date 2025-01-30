@@ -17,10 +17,10 @@ public:
     jucarie();
     jucarie(char* mat, int varsta, double pret);
     jucarie(const jucarie &c);
-    ~jucarie();
+    virtual ~jucarie();
 
-    void citire();
-    void afisare();
+    virtual void citire();
+    virtual void afisare();
 
     void setMaterial(char* mat);
     char* getMaterial();

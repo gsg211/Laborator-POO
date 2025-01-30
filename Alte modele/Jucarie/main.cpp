@@ -1,11 +1,15 @@
 #include <iostream>
 #include "jucarie.h"
+#include "minge.h"
+#include "container.h"
+
 using namespace std;
 
 int jucarie::contor=0;
 
 int main()
 {
+    /*
     jucarie *j,*j1,*j2,*j3;
     j=new jucarie;
     j1=new jucarie((char*)"lemn",10,15);
@@ -36,10 +40,12 @@ int main()
     //cin>>*j2>>*j3;
     cout<<*j2<<*j3;
 
-    cout<<"j2+j3: "<<*j2 + *j3<<"\n";
-    cout<<"j:"<<j->getPret()<<"\n";
-    cout<<"j:"<<j->getPret()<<"\n";
-    cout<<"dupa j2++: "<<(*j)++.getPret()<<"\n";
+    cout<<"j2+j3: "<<*j2 + *j3<<"\n\n\n";
+    cout<<*j<<*j2;
+    *j=(*j2)++;
+    cout<<*j<<*j2;
+    *j=++(*j2);
+    cout<<*j<<*j2;
     //cout<<"dupa j2++: "<<++(*j).getPret()<<"\n";
 
 
@@ -47,5 +53,28 @@ int main()
     delete j1;
     delete j2;
     delete j3;
+    */
+    /*
+    minge m,m1((char*)"Carpa",10,10,20,minge::fotball,minge::dezumflata),m2(m1);
+
+    m1.afisare();
+    m1=m2;
+    m2.afisare();
+    m1.afisare();
+
+    cin>>m2>>m1;
+
+    cout<<m2<<m1;
+    */
+    container<minge> v;
+    v.PushBack(minge((char*)"piele",5,25,5, minge::tenis,minge::umflata));
+    v.PushBack(minge((char*)"cauciuc",11,50,15,minge::fotball,minge::dezumflata));
+    v.PushBack(minge((char*)"carpa",6,0,10,minge::volley,minge::sparta));
+    v.display();
+
+    for(container<minge>::iterator it = v.begin(); it!= v.end();it++)
+    {
+        cout<<(*it).getMaterial()<<" \n";
+    }
     return 0;
 }
