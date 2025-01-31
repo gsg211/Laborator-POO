@@ -89,3 +89,22 @@ vehicle* truck::buildObj(char *brand_name, double cargo_load,int passagers,type 
     vehicle* p=new truck(brand_name,cargo_load,passagers,truck_type);
     return p;
 }
+
+truck::truck( truck &&t)
+{
+
+}
+truck& truck::operator=(truck&& t)
+{
+    if(&t==this)
+    {
+        return *this;
+    }
+
+    set_brand(t.get_brand());
+    set_passagers(t.get_passagers());
+    set_load(t.get_load());
+    this->truck_type=t.truck_type;
+    return *this;
+
+}

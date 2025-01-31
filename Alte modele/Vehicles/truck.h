@@ -16,10 +16,11 @@ namespace cars
         truck();
         
         truck(const truck &t);
+        truck( truck &&t);
         ~truck();
 
         truck& operator=(const truck& t);
-
+        truck& operator=(truck&& t);
         char* get_type();
 
         char* get_object_type();
@@ -28,6 +29,8 @@ namespace cars
         void read() override;
 
         static vehicle* buildObj(char *brand_name, double cargo_load,int passagers,type truck_type);
+
+
     };
     
     
