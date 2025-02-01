@@ -2,6 +2,9 @@
 
 #include "Shape.h"
 #include "Rectangle.h"
+#include "Circle.h"
+#include "ShapeFactory.h"
+
 int Shape::counter=0;
 
 using namespace std;
@@ -32,7 +35,26 @@ int main()
     cout<<"\n";
     r3.print();
 
-    
-    
+
+    Circle c,c1((char*)"Yellow",79),c2(c1),c3;
+    c.print();
+    cout<<"\n";
+    c1.print();
+    cout<<"\n";
+    c2.print();
+    c.setColor((char*)"Pink");
+    c3=c;
+    cout<<"\n";
+    c3.print();
+
+    cout<<"\n\n\n";
+
+    Shape *pr=ShapeFactory::CreateRectangle((char*)"Auriu",20,3);
+    Shape *pc=ShapeFactory::CreateCircle((char*)"orange",200);
+
+    pr->print();
+    pc->print();
+    cout<<"\n\n\n";
+
     return 0;
 }

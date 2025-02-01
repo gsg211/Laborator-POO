@@ -8,6 +8,7 @@ Rectangle::Rectangle(/* args */):Shape()
 
 Rectangle::~Rectangle()
 {
+    cout<<"Rectangle destructor\n";
     m_length=0;
     m_width=0;
 }

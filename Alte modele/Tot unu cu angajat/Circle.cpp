@@ -8,6 +8,7 @@ Circle::Circle(/* args */):Shape()
 
 Circle::~Circle()
 {
+    cout<<"Circle destructor\n";
     m_Radius=0;
 
 }

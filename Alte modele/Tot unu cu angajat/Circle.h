@@ -1,3 +1,4 @@
+#pragma once
 #include "Shape.h"
 #define pi 3.14
 class Circle: public Shape
