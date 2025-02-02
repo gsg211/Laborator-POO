@@ -10,7 +10,9 @@ object::~object()
 
 object::object(const char* owner)
 {
-    manufactureDate.getSytemDateandTime();
+    DateandTime d;
+    d.getSytemDateandTime();
+    manufactureDate=d;
     if(owner!=nullptr)
     {
         this->owner=new char[strlen(owner)+1];

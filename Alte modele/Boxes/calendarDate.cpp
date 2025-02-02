@@ -13,21 +13,21 @@ void DateandTime::getSytemDateandTime()
     time(&timestamp);
     struct tm* timeinfo;
     timeinfo=localtime(&timestamp);
-    int year=timeinfo->tm_year+1900;
-    int month=timeinfo->tm_mon;
-    int day=timeinfo->tm_mday;
-    int hour=timeinfo->tm_hour;
-    int minute=timeinfo->tm_min;
-    int second=timeinfo->tm_sec;
+     year=timeinfo->tm_year+1900;
+     month=timeinfo->tm_mon;
+     day=timeinfo->tm_mday;
+     hour=timeinfo->tm_hour;
+     minute=timeinfo->tm_min;
+     second=timeinfo->tm_sec;
 }
 void DateandTime::reset()
 {
-    int year=0;
-    int month=0;
-    int day=0;
-    int hour=0;
-    int minute=0;
-    int second=0; 
+     year=0;
+     month=0;
+     day=0;
+     hour=0;
+     minute=0;
+     second=0; 
 }
 const char* DateandTime::toString()
 {
