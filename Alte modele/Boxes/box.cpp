@@ -1,6 +1,8 @@
 #include "box.h"
 #include <stack>
 
+
+
 box::~box()
 {
     no=0;
@@ -40,14 +42,23 @@ void box::visit()const
     //trb un fel de afisare identata nu am reusit sa pun indenturile cum trb
 
 
+    
+    if(level==0)
+    {
+        cout<<"\n";
+    }
+    for(int i=0;i<level;i++)
+    {
+        cout<<"\n    ";
+    }
     cout<<GetOwner();
-    cout<<"\n    ";
     for(int i=0;i<no;i++)
     {
         if(k[i]!=nullptr)
         {
-            cout<<"\t";
+            level++;
             k[i]->visit();
+            level--;
         }
     }
   

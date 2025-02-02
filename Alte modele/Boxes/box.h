@@ -4,6 +4,7 @@
 class box:public object
 {
 private:
+    static int level;
     static const size_t M=23;
     Entity *k[M]={};
     size_t no;
